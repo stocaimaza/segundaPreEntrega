@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F3F3F3;
+}
+
+/* Header */
+
+.encabezado {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.encabezado h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 2.5rem;
+}
+
+.verde {
+    color: #7AB730;
+}
+
+.boton {
+    background-color: #7AB730;
+    color: #FAFAFA;
+    font-weight: 700;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+}
+
+
+.boton:hover {
+    background-color: #28a745;
+    color: #FAFAFA;
+    cursor: pointer;
+}
+
+.encabezado li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.encabezado li a {
+    text-decoration: none;
+    margin: 10px;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.encabezado li a:hover {
+    color: #7AB730;
+}
+
+/* Banner */
+
+.banner {
+    background-image: url("../img/banner.jpg");
+    height: calc(100vh - 100px);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Ajusta el valor alpha (0.5) para controlar la opacidad */
+    z-index: 0;
+}
+
+.bannerContenido {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.bannerContenido h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FAFAFA;
+    margin-bottom: 10px;
+}
+
+.bannerContenido p {
+    color: #FAFAFA;
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Rubik Mono One', sans-serif;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.bannerContenido .boton {
+    margin-top: 10px;
+}
+
+/* Destinos */
+
+
+.destinos {
+    text-align: center;
+    margin: 10vh;
+    border-bottom: 1px solid black;
+}
+
+.destinos h3 {
+    color: #28a745;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+.destinos p {
+    font-size: 4rem;
+    color: #212121;
+    padding: 10px;
+}
+
+.contenedorDestinos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.destino {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 10px; 
+}
+
+.tarjeta img {
+    max-width: 100%;
+
+}
+
+.tarjeta p {
+    margin: 10px 0;
+}
+
+.tarjeta button {
+    background-color: #7AB730;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.tarjeta button:hover {
+    background-color: #28a745;
+}
+
+/*Guias*/
+
+.contenedorGuias {
+    display: flex;
+    margin: 10vh;
+}
+
+
+/* Footer */
+.footer {
+    background-color: #212121;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footerContenido {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.infoContacto p,
+.redesSociales a {
+    margin: 5px 0;
+    font-size: 1.2rem;
+}
+
+.redesSociales a {
+    color: #7AB730;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.redesSociales a:hover {
+    color: #28a745;
+}
+
+
+.footer i {
+    margin-right: 10px;
+}
+
+/***************/
+
+/* Lo hacemos responsive:  */
+
+/*Vista tablet*/
+/*768px hasta 1023px*/
+
+@media (max-width:1023px) {
+    /*Header*/
+
+    .encabezado {
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .encabezado .boton {
+        display: none;
+    }
+
+    /*Banner*/
+
+    .bannerContenido p {
+        font-size: 2.5rem;
+    }
+
+    /*Destinos*/
+
+    .destinos {
+        margin: 5vh;
+        font-size: 2rem;
+    }
+
+    .destinos h3,
+    .destinos p {
+        font-size: inherit;
+    }
+
+    .contenedorDestinos {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /*Guias*/
+
+    .contenedorGuias {
+        flex-direction: column;
+    }
+
+    /*Footer*/
+
+    .footerContenido {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/*Ajustes específicos para la vista móvil*/
+/*0 hasta 768px*/
+
+@media (max-width:768px) {
+    /*Destinos */
+
+    .contenedorDestinos {
+        grid-template-columns: 1fr;
+    }
+}
